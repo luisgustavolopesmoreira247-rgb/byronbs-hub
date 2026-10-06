@@ -38,8 +38,8 @@ const iconProps = { className: "h-5 w-5", "aria-hidden": true } as const;
 const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "YouTube",
-    handle: "@ByronBS",
-    href: "https://www.youtube.com/@ByronBS",
+    handle: "@byronbs49",
+    href: "https://youtube.com/@byronbs49?si=QKoem_cQrq0UAXOd",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
         <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.5 15.6V8.4l6.3 3.6-6.3 3.6Z" />
@@ -48,8 +48,8 @@ const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: "Instagram",
-    handle: "@byronbs",
-    href: "https://www.instagram.com/byronbs/",
+    handle: "@byronbs49",
+    href: "https://www.instagram.com/byronbs49?stkn=MW5qMHE4Nmw0MDhtcw==",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" {...iconProps}>
         <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -60,41 +60,11 @@ const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: "TikTok",
-    handle: "@byronbs",
-    href: "https://www.tiktok.com/@byronbs",
+    handle: "@byronbs25",
+    href: "https://www.tiktok.com/@byronbs25",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
         <path d="M16.6 2h-3v13.1a2.7 2.7 0 1 1-2.3-2.7v-3a5.7 5.7 0 1 0 5.3 5.7V8.6A6.8 6.8 0 0 0 20.5 10V7a3.9 3.9 0 0 1-3.9-3.9V2Z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Twitch",
-    handle: "/byronbs",
-    href: "https://www.twitch.tv/byronbs",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
-        <path d="M4.3 2 2.6 6.3v14.4h5V24h3.1l2.7-3.3h4.1L21.4 15V2H4.3Zm15.2 12.2-3.1 3.7h-4.9l-2.7 3.3v-3.3H6.5V3.7h13v10.5ZM16.5 6.9v5.6h-1.9V6.9h1.9Zm-5 0v5.6H9.6V6.9h1.9Z" />
-      </svg>
-    ),
-  },
-  {
-    name: "X",
-    handle: "@byronbs",
-    href: "https://x.com/byronbs",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
-        <path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.3-8.4L1.5 3h6.4l4.4 5.9L17.5 3Zm-1.1 16.1h1.7L6.9 4.8H5.1l11.3 14.3Z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Discord",
-    handle: "Comunidade ByronBS",
-    href: "https://discord.gg/byronbs",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
-        <path d="M19.3 5.3A16.5 16.5 0 0 0 15.4 4l-.3.6a13.6 13.6 0 0 1 3.4 1.4 12.4 12.4 0 0 0-10.9 0A13.6 13.6 0 0 1 11 4.6L10.6 4a16.5 16.5 0 0 0-3.9 1.3C3.7 9.4 2.9 13.4 3.3 17.3a16.6 16.6 0 0 0 5 2.6l1-1.7a10.8 10.8 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10 0l.4.3a10.8 10.8 0 0 1-1.7.8l1 1.7a16.6 16.6 0 0 0 5-2.6c.5-4.4-.7-8.4-3.4-12ZM8.7 14.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z" />
       </svg>
     ),
   },
@@ -447,43 +417,48 @@ function Socials() {
     <section id="redes" className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-24">
         <Reveal>
-          <SectionLabel index="02">Redes sociais</SectionLabel>
+          <SectionLabel index="02">Minhas redes sociais</SectionLabel>
         </Reveal>
 
         <div className="grid gap-8 md:grid-cols-12 md:items-end">
           <Reveal className="md:col-span-7">
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-balance sm:text-4xl">
-              Siga o ByronBS oficial
+              Minhas Redes Sociais
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-5">
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Escolha a sua plataforma favorita e acompanhe tudo em primeira mão, direto das contas
-              oficiais.
+              Toque em um botão para abrir direto o perfil oficial do ByronBS na plataforma.
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-3">
           {SOCIAL_LINKS.map((social, i) => (
-            <Reveal key={social.name} delay={i * 0.06}>
-              <a
+            <Reveal key={social.name} delay={i * 0.08}>
+              <motion.a
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-5 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-card hover:shadow-[0_18px_40px_-28px_rgba(18,61,44,0.5)]"
+                whileHover={{ y: -6 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 320, damping: 22 }}
+                className="group flex h-full flex-col items-start gap-5 rounded-2xl border border-border bg-card/60 p-6 backdrop-blur transition-colors duration-300 hover:border-brand/60 hover:bg-card hover:shadow-[0_22px_48px_-30px_rgba(18,61,44,0.6)]"
               >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-border bg-background text-foreground transition-colors duration-300 group-hover:border-brand/60 group-hover:text-brand">
-                  {social.icon}
+                <span className="flex w-full items-center justify-between">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl border border-border bg-background text-foreground transition-colors duration-300 group-hover:border-brand group-hover:bg-brand group-hover:text-signal">
+                    {social.icon}
+                  </span>
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-brand" />
                 </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-semibold tracking-tight">{social.name}</span>
-                  <span className="block truncate text-xs text-muted-foreground">
+                <span className="w-full">
+                  <span className="block text-base font-semibold tracking-tight">{social.name}</span>
+                  <span className="mt-1 block truncate text-xs text-muted-foreground">
                     {social.handle}
                   </span>
+                  <span className="mt-4 block h-0.5 w-10 rounded-full bg-signal transition-all duration-300 group-hover:w-full" />
                 </span>
-                <ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
-              </a>
+              </motion.a>
             </Reveal>
           ))}
         </div>

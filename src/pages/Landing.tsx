@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { getFanSession } from "@/lib/fan-session";
+import { Link } from "react-router";
 import logo from "@/assets/logo.svg";
 
 /* ------------------------------------------------------------------ */
@@ -248,6 +250,9 @@ function Header() {
 /* ------------------------------------------------------------------ */
 
 function Hero() {
+  // Visitors with a fan profile land straight in the chat.
+  const [fanHomeHref] = useState(() => (getFanSession() ? "/chat" : "/fan"));
+
   return (
     <section id="inicio" className="relative overflow-hidden">
       <div className="hero-glow pointer-events-none absolute inset-x-0 top-0 h-[560px]" aria-hidden />
@@ -294,6 +299,13 @@ function Hero() {
           transition={{ duration: 0.6, delay: 0.24, ease: "easeOut" }}
           className="mt-10 flex flex-wrap items-center gap-3"
         >
+          <Link
+            to={fanHomeHref}
+            className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-br from-[#166a4a] via-brand to-[#0f4d37] px-7 text-sm font-bold text-white shadow-[0_14px_34px_-16px_rgba(18,61,44,0.9)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-14px_rgba(18,61,44,0.95)]"
+          >
+            ⭐ ME TORNAR FÃ
+            <ArrowUpRight className="h-4 w-4 text-signal transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
           <a
             href="#redes"
             className="group inline-flex h-12 items-center gap-2 rounded-xl bg-foreground px-7 text-sm font-semibold text-background transition-colors duration-300 hover:bg-brand"

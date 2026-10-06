@@ -158,3 +158,59 @@
     transparent 72%
   );
 }
+
+/* ------------------------------------------------------------------ */
+/* Fan area — dark, gamer-premium scope for /fan and /chat.            */
+/* Wrap the pages in `.dark` to flip the tokens, then use these.       */
+/* ------------------------------------------------------------------ */
+
+.fan-scope {
+  background:
+    radial-gradient(60% 45% at 15% 0%, rgb(18 61 44 / 0.55), transparent 70%),
+    radial-gradient(50% 40% at 90% 8%, rgb(245 197 66 / 0.1), transparent 65%),
+    radial-gradient(80% 60% at 50% 110%, rgb(18 61 44 / 0.45), transparent 70%),
+    #0a0f0d;
+}
+
+.glass-card {
+  background: rgb(255 255 255 / 0.055);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgb(255 255 255 / 0.09);
+}
+
+.brand-gradient-btn {
+  background: linear-gradient(135deg, #166a4a 0%, var(--brand-green) 55%, #0f4d37 100%);
+  box-shadow: 0 10px 30px -12px rgb(18 61 44 / 0.9), inset 0 1px 0 rgb(255 255 255 / 0.14);
+}
+.brand-gradient-btn:hover {
+  background: linear-gradient(135deg, #1a7c57 0%, #166a4a 55%, var(--brand-green) 100%);
+}
+
+.yellow-chip {
+  background: linear-gradient(135deg, var(--brand-yellow), #e0ab2b);
+  color: #241a02;
+}
+
+/* Thin dark scrollbars for the chat panes. */
+.fan-scope * {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 0.18) transparent;
+}
+.fan-scope *::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.fan-scope *::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.16);
+  border-radius: 999px;
+}
+
+/* Subtle pulse for the recording indicator. */
+@keyframes rec-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.rec-dot {
+  animation: rec-pulse 1s ease-in-out infinite;
+}

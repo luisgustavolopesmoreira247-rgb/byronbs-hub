@@ -17,6 +17,21 @@ export async function requireFan(
   return fan;
 }
 
+export async function requireFanByNameAndNumber(
+  ctx: QueryCtx | MutationCtx,
+  args: { name: string; number: number },
+): Promise<Doc<"fans">> {
+  const found = await ctx.db
+    .query("fans")
+    .withIndex("by_number", (q) => q.eq("fanNumber", args.number))
+    .unique();
+  if (!found) throw new Error("Número de fã não encontrado.");
+  if (found.name.toLowerCase() !== args.name.toLowerCase()) {
+    throw new Error("Nome não corresponde ao número de fã.");
+  }
+  return found;
+}
+
 /** Next free fan number. Starts at 10 and steps by 10 (matches #10, #20 …). */
 async function nextFanNumber(ctx: MutationCtx): Promise<number> {
   const row = await ctx.db
@@ -79,7 +94,6 @@ export const join = mutation({
       createdAt: Date.now(),
     });
 
-    // The official ⭐ ByronBS contact shows up automatically from day one.
     await ctx.db.insert("contacts", {
       ownerId: fanId,
       contactId: official._id,
@@ -119,6 +133,21 @@ export const findByNumber = query({
       name: found.name,
       fanNumber: found.fanNumber,
       isOfficial: found.isOfficial ?? false,
+    };
+  },
+});
+
+/** Brief fan row for buddy lists, group member chips, and the fan feed. */
+export const fanBrief = query({
+  args: { fanId: v.id("fans") },
+  handler: async (ctx, args) => {
+    const fan = await ctx.db.get(args.fanId);
+    if (!fan) return null;
+    return {
+      fanId: fan._id,
+      name: fan.name,
+      fanNumber: fan.fanNumber,
+      isOfficial: fan.isOfficial ?? false,
     };
   },
 });
